@@ -1,0 +1,121 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >Gráficos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  
+    <ion-item>
+        <ion-grid>
+            <ion-row (click)="goToGraficoTemperatura()">
+              <ion-col col-6>
+                <img src="/assets/imgs/amonia.jpg">
+              </ion-col>
+              <ion-col col-6>
+                <p class="graficos-texto">Amônia Total</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-item>
+  
+
+  <ion-item>
+      <ion-grid>
+        <ion-row (click)="goToGraficoTemperatura()">
+          <ion-col col-6>
+            <img src="/assets/imgs/nitrato.png">
+          </ion-col>
+          <ion-col col-6>
+            <p class="graficos-texto">Nitrato</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item> 
+
+
+<ion-item>
+  <ion-grid>
+    <ion-row (click)="goToGraficoTemperatura()">
+      <ion-col col-6>
+        <img src="/assets/imgs/icon.svg">
+      </ion-col>
+      <ion-col col-6>
+        <p class="graficos-texto">Nitrito</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+      <ion-row (click)="goToGraficoTemperatura()">
+        <ion-col col-6>
+          <img src="/assets/imgs/oxig.jpg">
+        </ion-col>
+        <ion-col col-6>
+          <p class="graficos-texto">Oxigênio Dissolvido</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-item>
+
+<ion-item>
+    <ion-grid>
+      <ion-row (click)="goToGraficoPh()">
+        <ion-col col-6>
+          <img src="/assets/imgs/ph.jpg">
+        </ion-col>
+        <ion-col col-6>
+          <p class="graficos-texto">Ph</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+      <ion-row  [navPush]="'SalinidadePage'" >
+        <ion-col col-6>
+          <img src="/assets/imgs/salinidade-icone.png">
+        </ion-col>
+        <ion-col col-6>
+          <p class="graficos-texto">Salinidade</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+<ion-item>
+  <ion-grid>
+    <ion-row (click)="goToGraficoTemperatura()">
+      <ion-col col-6>
+        <img src="/assets/imgs/thermometer.svg">
+      </ion-col>
+      <ion-col col-6>
+        <p class="graficos-texto">Temperatura</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+      <ion-row (click)="goToGraficoTemperatura()">
+        <ion-col col-6>
+          <img src="/assets/imgs/transparencia.jpg">
+        </ion-col>
+        <ion-col col-6>
+          <p class="graficos-texto">Transparência</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-item>
+</ion-content>

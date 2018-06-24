@@ -1,0 +1,45 @@
+page-home {
+  .scroll-content {
+    background-color: map-get($colors, light);
+}
+
+ion-card-header {
+    font-weight: bold;
+}
+
+img.ph{
+    height: 100%;
+}
+
+img.nitrato{
+    height: 200px;
+    width: 211px;
+    margin: 0 auto;
+}
+
+img.nitrito{
+    height: 200px;
+    width: 211px;
+    margin: 0 auto;
+}
+
+.graficos-texto{
+    font-size: 20px;
+    padding-top: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+.ret{
+    width: 125px;
+    background-color: #e4e473;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.label-ios, .label-md {
+    margin: 11px 0px 9px 10px;
+
+}
+}

@@ -1,0 +1,54 @@
+<ion-menu [content]="content" class="sidebar">
+
+
+    <ion-content class="content" *ngIf="globals.pages">
+      <ion-list no-lines class="options">
+        <button  menuClose ion-item *ngFor="let p of globals.pages" (click)="openPage(p)">
+            <ion-icon [name]="p.icone"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<!-- <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<ion-menu [content]="content " class="sidebar">
+  <ion-content class="content">
+    <div class="container-perfil padding">
+      <div class="img-perfil">
+        <img menuToggle [src]="aluno?.foto || 'assets/img/icone-branco.png'" (click)="openPageParams('CarteirinhaPage', {foto:aluno?.foto})"
+          style="-webkit-transform: none" />
+      </div>
+      <h3>{{aluno?.nome}}</h3>
+      <p>{{aluno?.curso}}</p>
+    </div>
+    <ion-list class="options">
+      <a menuToggle (click)="openPageInicio()" class="first-option">
+        <ion-icon name="home"> </ion-icon> Início {{aluno?.length}}</a>
+      <a menuToggle (click)="openPageParams('CarteirinhaPage', {foto:aluno?.foto})">
+        <ion-icon name="contact">
+        </ion-icon> Carteirinha</a>
+      <a menuToggle (click)="openPage('MapaPage')">
+        <ion-icon name="navigate">
+        </ion-icon> Localização</a>
+      <a menuToggle (click)="openPage('SuportePage')">
+        <ion-icon name="help-circle">
+        </ion-icon> Suporte</a>
+      <a menuToggle (click)="openPage('CalendarioPage')">
+        <ion-icon name="calendar">
+        </ion-icon> Calendário Acadêmico</a>
+      <a menuToggle (click)="openPage('DocumentosPendentesPage')">
+        <ion-icon name="calendar">
+        </ion-icon> Documentos Pendentes</a>
+      <a menuToggle (click)="sair()">
+        <ion-icon name="exit"></ion-icon> Sair</a>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav> -->

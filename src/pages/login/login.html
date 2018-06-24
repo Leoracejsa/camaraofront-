@@ -1,0 +1,18 @@
+<ion-content padding>
+
+
+  <img src="assets/imgs/logo-login-camarao.jpg" alt="Uma imagem da tela inicial">
+  <h3 class="title-page">Super Camarão do Nordeste</h3>
+  <form >
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input [(ngModel)]="creds.email" name="email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    <ion-label floating>Senha</ion-label>
+    <ion-input [(ngModel)]="creds.senha" name="senha" type="password"></ion-input>
+  </ion-item>
+  <button (click)="login()" ion-button block>Entrar</button>
+  </form>
+</ion-content>

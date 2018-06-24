@@ -1,0 +1,34 @@
+<ion-header>
+<ion-navbar>
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Funcionários</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let funcionario of funcionarios;">
+
+    <ion-item>
+      <h2>{{funcionario?.nome}}</h2>
+      <h2>{{funcionario?.email}}</h2>
+    </ion-item>
+    <ion-card-header>
+      Telefones:
+      <p *ngFor="let telefone of funcionario.telefones">{{telefone}}</p>
+    </ion-card-header>
+
+    <p *ngFor="let endereco of funcionario.enderecos">
+
+      <ion-item>
+          Endereços: 
+        <h2>{{endereco?.logradouro}}, {{endereco?.numero}}</h2>
+        <p>{{endereco?.complemento}} {{endereco?.bairro}} CEP {{endereco?.cep}}</p>
+        <p>{{endereco?.cidade.nome}}, {{endereco?.cidade.estado.nome}}</p>
+      </ion-item>
+    </p>
+
+  </ion-card>
+</ion-content>
